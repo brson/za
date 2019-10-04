@@ -955,7 +955,7 @@ function execSignalAssign(ctx, ast) {
     //    if the signal has an equivalence, replace the signal for its equivalence
     while (sDest.equivalence) sDest=ctx.signals[sDest.equivalence];
 
-    if (sDest.value) return error(ctx, ast, "Signals cannot be assigned twice");
+    if (sDest.value) return error(ctx, ast, "Signals cannot be assigned twice ",ast);
 
     // process the source that nees to eval to a SIGNAL or a NUMBER with value
     let src = exec(ctx, ast.values[1]);

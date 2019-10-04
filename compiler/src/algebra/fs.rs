@@ -32,8 +32,9 @@ lazy_static! {
     static ref MASK32: BigUint = BigUint::parse_bytes(b"ffff",16).unwrap();
 }
 
-
 // Field Scalar  ------------------------------------------------
+
+
 
 impl FS {
     fn field() -> &'static BigUint {
